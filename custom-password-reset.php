@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined( 'ABSPATH' ) ) exit;
 
 /*
 Plugin Name: Custom Password Reset Email
@@ -11,6 +11,16 @@ Text Domain: custom-password-reset
 
 class Custom_Password_Reset_Email
 {
+
+    public function __construct()
+    {
+        add_filter( 'wp_mail_from', array( $this, 'custom_wp_mail_from' ) );
+    }
+
+    private function custom_wp_mail_from( $email )
+    {
+        return $email;
+    }
 
 
 
