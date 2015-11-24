@@ -26,6 +26,7 @@ class Custom_Password_Reset_Email
 
     }
 
+
 }
 
 $cpr_return = new Custom_Password_Reset_Email();
