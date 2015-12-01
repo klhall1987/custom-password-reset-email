@@ -1,26 +1,30 @@
 <html>
-    <form action="<?php echo Custom_Password_Reset_Email::$url . 'includes/templates/test.html.php'; ?>" method="POST">
+    <form action="" method="POST">
+        <div>
+            <label>
+                From Name:<br>
+                <input type="text" name="cpr-from-name">
+            </label>
+            <br>
         <div>
             <label>
                 From E-mail:<br>
-                <input type="text" name="from-email">
+                <input type="text" name="cpr-from-email">
             </label>
             <br>
             <label>
                 Subject:<br>
-                <input type="text" name="subject">
+                <input type="text" name="cpr-subject">
             </label>
             <br>
-
             <label>
                 Message:<br>
-                <textarea rows="4" cols="30" name="message">
-                </textarea>
+                <textarea rows="4" cols="30" name="cpr-message"></textarea>
             </label>
             <br>
             <br>
             <label>
-                <input type="submit">
+                <input type="submit" name="cpr-submit">
             </label>
         </div>
     </form>

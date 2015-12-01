@@ -11,7 +11,6 @@ Text Domain: custom-password-reset
 
 class Custom_Password_Reset_Email
 {
-
     public static $url;
 
     public static $dir;
@@ -23,10 +22,7 @@ class Custom_Password_Reset_Email
         self::$dir = plugin_dir_path( __FILE__ );
 
         self::$url = plugin_dir_url( __FILE__ );
-
     }
-
-
 }
 
 $cpr_return = new Custom_Password_Reset_Email();
