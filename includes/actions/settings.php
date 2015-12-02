@@ -5,30 +5,33 @@ class cpr_add_options
 
     public function __construct()
     {
-        if( isset( $_POST[ 'cpr-from-name'] ) && !empty( $_POST[ 'cpr-from-name' ] ) )
+        if( isset( $_POST[ 'cpr-submit' ] ) )
         {
-            update_option( 'cpr_from_name_option', $_POST[ 'cpr-from-name' ] );
-        }
-
-        if( isset( $_POST[ 'cpr-from-email' ] ) && !empty( $_POST[ 'cpr-from-email' ] ) )
-        {
-            update_option( 'cpr_from_email_option', $_POST[ 'cpr-from-email' ] );
-        }
-
-        if( isset( $_POST[ 'cpr-subject' ] ) && !empty( $_POST[ 'cpr-subject' ] ) )
-        {
-            update_option( 'cpr_subject_option', $_POST[ 'cpr-subject' ] );
-        }
-
-        if( isset( $_POST[ 'cpr-message' ] ) && !empty( $_POST[ 'cpr-message' ] ) )
-        {
-            update_option( 'cpr_message_option', $_POST[ 'cpr-message' ] );
+            $this->cpr_update_options( $_POST );
         }
     }
 
-    public function cpr_error( $errors )
+    public function cpr_update_options( $post )
     {
+        if( !empty( $post[ 'cpr-from-name' ] ) )
+        {
+            update_option( 'cpr_from_name_option', $post[ 'cpr-from-name' ] );
+        }
 
+        if( !empty( $post[ 'cpr-from-email' ] ) )
+        {
+            update_option( 'cpr_from_email_option', $post[ 'cpr-from-email' ] );
+        }
+
+        if( !empty( $post[ 'cpr-subject' ] ) )
+        {
+            update_option( 'cpr_subject_option', $post[ 'cpr-subject' ] );
+        }
+
+        if( !empty( $post[ 'cpr-message' ] ) )
+        {
+            update_option( 'cpr_message_option', $post[ 'cpr-message' ] );
+        }
     }
 
 }

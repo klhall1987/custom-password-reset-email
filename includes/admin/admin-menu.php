@@ -5,7 +5,6 @@ class register_admin_menu
     public function __construct()
     {
         add_action( 'admin_menu', array( $this, 'cpr_admin_menu' ) );
-
     }
 
     public function cpr_admin_menu()

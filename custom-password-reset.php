@@ -18,7 +18,7 @@ class Custom_Password_Reset_Email
     public function __construct()
     {
         require_once( 'includes/admin/admin-menu.php' );
-
+        require_once( 'includes/actions/settings.php' );
 
         self::$dir = plugin_dir_path( __FILE__ );
 
