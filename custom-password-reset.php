@@ -19,9 +19,11 @@ class Custom_Password_Reset_Email
     {
         require_once( 'includes/admin/admin-menu.php' );
 
+
         self::$dir = plugin_dir_path( __FILE__ );
 
         self::$url = plugin_dir_url( __FILE__ );
+
     }
 }
 
