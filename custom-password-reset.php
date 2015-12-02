@@ -15,6 +15,9 @@ class Custom_Password_Reset_Email
 
     public static $dir;
 
+    /**
+     * Custom_Password_Reset_Email constructor.
+     */
     public function __construct()
     {
         require_once( 'includes/admin/admin-menu.php' );

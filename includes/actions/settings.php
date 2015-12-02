@@ -3,6 +3,9 @@
 class cpr_add_options
 {
 
+    /**
+     * cpr_add_options constructor.
+     */
     public function __construct()
     {
         if( isset( $_POST[ 'cpr-submit' ] ) )
