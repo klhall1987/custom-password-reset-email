@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <form action="" method="POST">
         <div>
             <label>
@@ -26,6 +26,9 @@
             <label>
                 <input type="submit" name="cpr-submit">
             </label>
+            <br>
+            <br>
+            <input type="submit" name="cpr-test-email" value="Sent Test Email">
         </div>
     </form>
 </html>
