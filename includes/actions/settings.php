@@ -2,6 +2,10 @@
 
 class cpr_add_options
 {
+    /**
+     * @var
+     */
+    public $site_url;
 
     /**
      * cpr_add_options constructor.
@@ -9,16 +13,19 @@ class cpr_add_options
     public function __construct()
     {
 
+        if( isset( $_POST[ 'cpr-submit' ] ) )
+        {
+            $this->cpr_update_options( $_POST );
+        }
+
         add_filter( 'wp_mail_from_name', array( $this, 'cpr_update_mail_from_name' ) );
 
         add_filter( 'wp_mail_from', array( $this, 'cpr_update_mail_from' ) );
 
         add_filter( 'retrieve_password_title', array( $this, 'cpr_update_password_title' ) );
 
-        if( isset( $_POST[ 'cpr-submit' ] ) )
-        {
-            $this->cpr_update_options( $_POST );
-        }
+        add_filter( 'retrieve_password_message', array( $this, 'cpr_update_password_reset_message' ), 10 ,4 );
+
     }
 
     public function cpr_update_options( $post )
@@ -57,6 +64,17 @@ class cpr_add_options
     public function cpr_update_password_title()
     {
         return get_option( 'cpr_subject_option' );
+    }
+
+    public function cpr_update_password_reset_message( $message, $key, $user_login )
+    {
+        $this->site_url = get_site_url();
+
+        $message = get_option( 'cpr_subject_option' );
+
+        $message .=  $this->site_url . '/wp-login.php?action=rp&key=' . $key . '&login=' . $user_login;
+
+        return $message;
     }
 
 }
