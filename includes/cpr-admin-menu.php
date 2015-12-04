@@ -10,7 +10,6 @@ class register_admin_menu
         add_action( 'admin_menu', array( $this, 'cpr_admin_menu' ) );
     }
 
-
     public function cpr_admin_menu()
     {
         add_menu_page(
@@ -26,10 +25,9 @@ class register_admin_menu
 
     public function cpr_admin_callback()
     {
-        include( Custom_Password_Reset_Email::$dir . 'includes/templates/cpr-admin-template.html.php' );
+        include( Custom_Password_Reset_Email::$dir . 'includes/cpr-admin-template.html.php' );
     }
-
 }
 
-$register_admin_menu = new register_admin_menu();
+( new register_admin_menu );
 

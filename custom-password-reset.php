@@ -20,17 +20,14 @@ class Custom_Password_Reset_Email
      */
     public function __construct()
     {
-        require_once( 'includes/admin/admin-menu.php' );
-        require_once( 'includes/actions/settings.php' );
+        require_once('includes/cpr-admin-menu.php');
+        require_once('includes/cpr-settings.php');
 
         self::$dir = plugin_dir_path( __FILE__ );
 
         self::$url = plugin_dir_url( __FILE__ );
-
     }
 }
 
-$cpr_return = new Custom_Password_Reset_Email();
-
-return $cpr_return;
+( new Custom_Password_Reset_Email );
 

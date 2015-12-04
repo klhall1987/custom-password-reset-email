@@ -76,7 +76,6 @@ class cpr_add_options
 
         return $message;
     }
-
 }
 
-$cpr_add_options = new cpr_add_options();
+( new cpr_add_options );
