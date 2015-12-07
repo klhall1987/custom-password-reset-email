@@ -21,7 +21,7 @@
                 Message:<br>
                 <textarea rows="4" cols="30" name="cpr-message"><?php echo get_option( 'cpr_message_option' ); ?></textarea>
             </label>
-            <h5>Insert {password_key} shortcode where ever you would like the key to appear in your email.</h5>
+            <h5>Insert {password_key} shortcode where ever you would like the email password key to appear in your email.</h5>
             <label>
                 <input type="submit" name="cpr-submit">
             </label>
