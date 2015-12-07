@@ -21,14 +21,17 @@
                 Message:<br>
                 <textarea rows="4" cols="30" name="cpr-message"><?php echo get_option( 'cpr_message_option' ); ?></textarea>
             </label>
-            <br>
-            <br>
+            <h5>Insert {password_key} shortcode where ever you would like the key to appear in your email.</h5>
             <label>
                 <input type="submit" name="cpr-submit">
             </label>
             <br>
             <br>
-            <input type="submit" name="cpr-test-email" value="Sent Test Email">
+            <a href="<?php echo  $cpr_site_url . '/wp-login.php?action=lostpassword'; ?>">
+                <button type="button" name="cpr-goto-pwreset">Go To Password Reset Page</button>
+            </a>
         </div>
     </form>
 </html>
+
+

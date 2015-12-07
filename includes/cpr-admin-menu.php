@@ -25,6 +25,8 @@ class register_admin_menu
 
     public function cpr_admin_callback()
     {
+        $cpr_site_url = get_site_url();
+
         include( Custom_Password_Reset_Email::$dir . 'includes/cpr-admin-template.html.php' );
     }
 }
