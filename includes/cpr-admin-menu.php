@@ -12,14 +12,12 @@ class register_admin_menu
 
     public function cpr_admin_menu()
     {
-        add_menu_page(
-            'custom password reset email',
+        add_options_page(
+            'Password Reset Email',
             'Password Reset Email',
             'manage_options',
             'custom-password-reset-email',
-            array( $this, 'cpr_admin_callback' ),
-            'dashicons-email-alt',
-            30
+            array( $this, 'cpr_admin_callback' )
         );
     }
 
