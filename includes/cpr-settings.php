@@ -18,12 +18,6 @@ class cpr_add_options
             $this->cpr_update_options( $_POST );
         }
 
-        if (isset($_POST[ 'cpr-goto-pwreset' ] ) ) {
-
-            $this->cpr_update_options( $_POST );
-
-        }
-
         add_filter('wp_mail_from_name', array($this, 'cpr_update_mail_from_name') );
 
         add_filter('wp_mail_from', array($this, 'cpr_update_mail_from') );
