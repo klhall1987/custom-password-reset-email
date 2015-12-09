@@ -9,14 +9,27 @@ Author URI: http://kennyinthewild.com
 Text Domain: custom-password-reset
 */
 
+/**
+ * Class Custom_Password_Reset_Email
+ *
+ * This is a the base class for Custom Password Reset.
+ */
 class Custom_Password_Reset_Email
 {
-    public static $url;
+    /**
+     * @var string
+     */
+    public static $url = '';
 
-    public static $dir;
+    /**
+     * @var string
+     */
+    public static $dir = '';
 
     /**
      * Custom_Password_Reset_Email constructor.
+     *
+     * This constructor sets static directory and url variables.
      */
     public function __construct()
     {
