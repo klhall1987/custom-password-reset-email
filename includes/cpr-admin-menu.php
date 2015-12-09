@@ -13,8 +13,8 @@ class register_admin_menu
     public function cpr_admin_menu()
     {
         add_options_page(
-            'Password Reset Email',
-            'Password Reset Email',
+            __( 'Password Reset Email' ),
+            __( 'Password Reset Email' ),
             'manage_options',
             'custom-password-reset-email',
             array( $this, 'cpr_admin_callback' )
