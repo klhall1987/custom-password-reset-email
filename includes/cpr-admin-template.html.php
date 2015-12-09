@@ -27,9 +27,7 @@
             </label>
             <br>
             <br>
-            <a href="<?php echo $passwordResetURL; ?>">
-                <button type="button" class="button-secondary" name="cpr-goto-pwreset">Go To Password Reset Page</button>
-            </a>
+            <a href="<?php echo $passwordResetURL; ?>" type="button" class="button-secondary">Go To Password Reset Page</a>
         </div>
     </form>
 </html>
