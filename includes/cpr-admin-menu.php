@@ -23,6 +23,8 @@ class register_admin_menu
 
     public function cpr_admin_callback()
     {
+        $cpr_set_css  = Custom_Password_Reset_Email::$url . 'css/cpr-styles.css';
+
         $cpr_site_url = get_site_url();
 
         $passwordResetURL   = $cpr_site_url . '/wp-login.php?action=lostpassword';
@@ -35,6 +37,9 @@ class register_admin_menu
 
         $cprMessageOption   = get_option( 'cpr_message_option' );
 
+        $cprEditorSettings  = array(
+            'editor_height' => 75,
+            );
 
         include( Custom_Password_Reset_Email::$dir . 'includes/cpr-admin-template.html.php' );
     }
