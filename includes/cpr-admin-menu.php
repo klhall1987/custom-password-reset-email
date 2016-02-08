@@ -13,8 +13,8 @@ class register_admin_menu
     public function cpr_admin_menu()
     {
         add_options_page(
-            __( 'Password Reset Email' ),
-            __( 'Password Reset Email' ),
+            __( 'Custom Password Reset' ),
+            __( 'Custom Password Reset' ),
             'manage_options',
             'custom-password-reset-email',
             array( $this, 'cpr_admin_callback' )
@@ -33,13 +33,14 @@ class register_admin_menu
 
         $cprFromEmailOption = get_option( 'cpr_from_email_option' );
 
-        $cprSubjectOption   = get_option( 'cpr_subject_option' );
+        $cprSubjectOption   = get_option( 'cpr_suject_option' );
 
         $cprMessageOption   = get_option( 'cpr_message_option' );
 
         $cprEditorSettings  = array(
             'editor_height' => 250,
-            'editor_class' => 'cpr-editor'
+            'media_buttons' => false,
+            'drag_drop_upload' => true
             );
 
         include( Custom_Password_Reset_Email::$dir . 'includes/cpr-admin-template.html.php' );
