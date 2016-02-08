@@ -33,7 +33,7 @@ class register_admin_menu
 
         $cprFromEmailOption = get_option( 'cpr_from_email_option' );
 
-        $cprSubjectOption   = get_option( 'cpr_suject_option' );
+        $cprSubjectOption   = get_option( 'cpr_subject_option' );
 
         $cprMessageOption   = get_option( 'cpr_message_option' );
 
