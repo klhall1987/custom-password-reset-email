@@ -27,12 +27,12 @@
                 <h3>Insert {password_key} shortcode where ever you would like the email password key to appear in your email.</h3>
             </div>
             <div class="cpr-buttons">
+                <a href="<?php echo $passwordResetURL; ?>" type="button" class="button-secondary">Go To Password Reset Page</a>
+                <br>
+                <br>
                 <label>
                     <input type="submit" class="button-primary" name="cpr-submit">
                 </label>
-                <br>
-                <br>
-                <a href="<?php echo $passwordResetURL; ?>" type="button" class="button-secondary">Go To Password Reset Page</a>
             </div>
         </div>
     </form>
